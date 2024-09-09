@@ -15,7 +15,7 @@ int main() {
     scanf("%lf", &c);
 
     
-    double m = (a * p1 + b * p2 + c * p3) / (p1 + p2 + p3);
+    double m = (a * p1 + b * p2 + c * p3) / 10;
 
 
     printf("La moyenne ponderee est : %.2lf\n", m);
