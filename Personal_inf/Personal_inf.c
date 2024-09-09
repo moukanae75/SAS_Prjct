@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <windows.h>
-#include <string.h>  // Nécessaire pour strcpy
+#include <string.h>
 
 int main() {
     char name[30];
@@ -24,10 +24,10 @@ int main() {
     system("cls");
 
     printf("Entrer (M/F) pour votre sexe : ");
-    scanf(" %c", &s);  // Ajout de l'espace avant %c
+    scanf(" %c", &s);
     system("cls");
 
-    // Utilisation de strcpy pour copier les chaînes
+    
     if(s == 'M') {
         strcpy(sexe, "Masculin");
     } else if (s == 'F') {
