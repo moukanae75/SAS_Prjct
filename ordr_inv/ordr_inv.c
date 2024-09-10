@@ -2,7 +2,8 @@
 
 int main() {
     int N;
-    int inverse = 0;
+    int a,b,c,d;
+    
 
     system("cls");
 
@@ -15,13 +16,13 @@ int main() {
         printf("Le nombre doit être à 4 chiffres.\n");
         return 1;
     }
+    a = N/1000;
+    b = (N/100)%10;
+    c = (N/10)%10;
+    d = N % 10;
 
-    while (N != 0) {
-        int res = N % 10;
-        inverse = inverse * 10 + res;  
-        N = N / 10;  
-    }
-    printf("L'inverse du nombre est : %d\n", inverse);
+    
+    printf("L'inverse du nombre est : %d%d%d%d\n", d,c,b,a);
 
     return 0;
 }
