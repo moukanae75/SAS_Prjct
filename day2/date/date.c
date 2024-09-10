@@ -4,7 +4,7 @@
 
 
 int main() {
-    char date[11];
+    
     int jour, mois, annee;
     system("cls");
     
@@ -13,29 +13,29 @@ int main() {
 
     
     switch (mois) {
-        case 1: printf("%d-%s-%d\n", jour, "Janvier", annee); date == "Janvier";
+        case 1: printf("%d-%s-%d\n", jour, "Janvier", annee);
         break;
-        case 2: printf("%d-%s-%d\n", jour, "Fevrier", annee); date == "Février";
+        case 2: printf("%d-%s-%d\n", jour, "Fevrier", annee);
         break;
-        case 3: printf("%d-%s-%d\n", jour, "Mars", annee); date == "Mars";
+        case 3: printf("%d-%s-%d\n", jour, "Mars", annee);
         break;
-        case 4: printf("%d-%s-%d\n", jour, "Avril", annee); date == "Avril";
+        case 4: printf("%d-%s-%d\n", jour, "Avril", annee);
         break;
-        case 5: printf("%d-%s-%d\n", jour, "Mai", annee); date == "Mai";
+        case 5: printf("%d-%s-%d\n", jour, "Mai", annee);
         break;
-        case 6: printf("%d-%s-%d\n", jour, "Juin", annee); date == "Juin";
+        case 6: printf("%d-%s-%d\n", jour, "Juin", annee);
         break;
-        case 7: printf("%d-%s-%d\n", jour, "Juillet", annee); date == "Juillet";
+        case 7: printf("%d-%s-%d\n", jour, "Juillet", annee);
         break;
-        case 8: printf("%d-%s-%d\n", jour, "Aout", annee); date == "Août";
+        case 8: printf("%d-%s-%d\n", jour, "Aout", annee);
         break;
-        case 9: printf("%d-%s-%d\n", jour, "Septembre", annee); date == "Septembre";
+        case 9: printf("%d-%s-%d\n", jour, "Septembre", annee);
         break;
-        case 10:printf("%d-%s-%d\n", jour, "Octobre", annee); date ==  "Octobre";
+        case 10:printf("%d-%s-%d\n", jour, "Octobre", annee);
         break;
-        case 11:printf("%d-%s-%d\n", jour, "Novembre", annee); date ==  "Novembre";
+        case 11:printf("%d-%s-%d\n", jour, "Novembre", annee);
         break;
-        case 12:printf("%d-%s-%d\n", jour, "Decembre", annee); date ==  "Décembre";
+        case 12:printf("%d-%s-%d\n", jour, "Decembre", annee);
         break;
         default:printf("Inconu Date !!");
         break;
