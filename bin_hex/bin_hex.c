@@ -30,7 +30,7 @@ void negative(int n) {
         n = n / 2;
         i++;
     }
-    printf("1");
+    printf("1 ");
     for (int j = i - 1; j>=0;j --) {
         printf("%d",arr[j]);
     }
