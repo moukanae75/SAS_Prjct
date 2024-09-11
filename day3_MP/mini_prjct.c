@@ -5,13 +5,13 @@ void supprimer();
 void afficher();
 void rechercher();
 void fordelay();
-#define MAX_TASKS 100
-#define MAX_LEN 100
+#define taches 100
+#define len 100
 
-char titles[MAX_TASKS][MAX_LEN];
-char descriptions[MAX_TASKS][MAX_LEN];
-char dates[MAX_TASKS][MAX_LEN];
-// int next[MAX_TASKS];
+char titles[taches][len];
+char descriptions[taches][len];
+char dates[taches][len];
+// int next[taches];
 
 // int head = -1;  
 int free_spot = 0; 
@@ -24,6 +24,7 @@ void ajouter() {
     scanf(" %s", descriptions[free_spot]);
     printf("Entrez la date d'echeance (AAAA-MM-JJ) : ");
     scanf(" %s", dates[free_spot]);
+    printf("Tache ajoutee avec succes !\n");
     
     free_spot++;
     int choix;
@@ -83,7 +84,7 @@ int main() {
     return 0;
 }
 void supprimer() {
-    char titre[MAX_LEN];
+    char titre[len];
     printf("Entrez le titre de la tache a supprimer : ");
     scanf("%s", titre);
     int index = 0;
