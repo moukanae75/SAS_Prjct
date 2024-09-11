@@ -5,39 +5,18 @@ void supprimer();
 void afficher();
 void rechercher();
 void fordelay();
+void ajouter();
+
 #define taches 100
 #define len 100
 
 char titles[taches][len];
 char descriptions[taches][len];
 char dates[taches][len];
-// int next[taches];
 
-// int head = -1;  
-int free_spot = 0; 
+int free = 0; 
 
-void ajouter() {
-    system("cls");
-     printf("Entrez le titre de la tache : ");
-    scanf(" %s", titles[free_spot]);
-    printf("Entrez la description de la tache : ");
-    scanf(" %s", descriptions[free_spot]);
-    printf("Entrez la date d'echeance (AAAA-MM-JJ) : ");
-    scanf(" %s", dates[free_spot]);
-    printf("Tache ajoutee avec succes !\n");
-    
-    free_spot++;
-    int choix;
-    printf("\t\tEntrer 0 pour revenir au menu et 1 pour exit : ");
-    scanf("%d",&choix);
-    if (choix == 0)
-    {
-        system("cls");
-        main();
-    }else{
-        return;
-    }
-}
+
 
  
 int main() {
@@ -55,23 +34,23 @@ int main() {
         
             scanf("%d", &choix);
             system("cls");
-
+            
             switch (choix) {
             case 1:
                 ajouter();
-                break;
+                
             case 2:
                 supprimer();
-                break;
+                
             case 3:
                 afficher();
-                break;
+                
             case 4:
                 rechercher();
-                break;
+                
             case 5:
                 printf("Au revoir !\n");
-                break;
+               
             default:
                 printf("Choix invalide. Veuillez reessayer.\n");
                 main();
@@ -83,12 +62,34 @@ int main() {
 
     return 0;
 }
+void ajouter() {
+    system("cls");
+    printf("Entrez le titre de la tache : ");
+    scanf(" %s", titles[free]);
+    printf("Entrez la description de la tache : ");
+    scanf(" %s", descriptions[free]);
+    printf("Entrez la date d'echeance (AAAA-MM-JJ) : ");
+    scanf(" %s", dates[free]);
+    printf("Tache ajoutee avec succes !\n");
+    
+    free++;
+    int choix;
+    printf("\t\tEntrer 0 pour revenir au menu et 1 pour exit : ");
+    scanf("%d",&choix);
+    if (choix == 0)
+    {
+        system("cls");
+        main();
+    }else{
+        return;
+    }
+}
 void supprimer() {
     char titre[len];
     printf("Entrez le titre de la tache a supprimer : ");
     scanf("%s", titre);
     int index = 0;
-    while (index < free_spot)
+    while (index < free)
     {
         if (strcmp(titles[index], titre) == 0) {
             printf("Tache supprimee avec succes !\n");
@@ -115,7 +116,7 @@ void supprimer() {
 void afficher() {
     char test[10];
 
-    for(int i = 0; i < free_spot; i++) {
+    for(int i = 0; i < free; i++) {
         strcpy(test,titles[i]);
         if (strcmp(test, "") != 0)
         {
@@ -139,7 +140,7 @@ void afficher() {
 };
 void rechercher() {
     system("cls");
-    if (free_spot == 0) {
+    if (free == 0) {
         printf("Aucune tache a rechercher.\n");
         fordelay();
         main();
@@ -148,7 +149,7 @@ void rechercher() {
     printf("Entrez le titre de la tache a rechercher : ");
     scanf(" %s", test);
 
-    for(int i = 0; i < free_spot; i++) {
+    for(int i = 0; i < free; i++) {
         
         if (strcmp(test, titles[i]) == 0)
         {
