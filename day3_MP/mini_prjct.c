@@ -169,7 +169,7 @@ void rechercher() {
         return;
     }
 };
-void fordelay(int j) {
+void fordelay() {
    
         
             
